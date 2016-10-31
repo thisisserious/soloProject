@@ -1,0 +1,25 @@
+{
+  "name": "soloProject",
+  "version": "1.0.0",
+  "description": "‘Good Help’ is a dual-rating system application that allows a user to search for an organization that relies on volunteers and rate their experience volunteering for that organization. Conversely, an organization can rate volunteers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisisserious/soloProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisisserious/soloProject/issues"
+  },
+  "homepage": "https://github.com/thisisserious/soloProject#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "normalize-css": "^2.3.1"
+  }
+}
