@@ -4,7 +4,8 @@
   "description": "‘Good Help’ is a dual-rating system application that allows a user to search for an organization that relies on volunteers and rate their experience volunteering for that organization. Conversely, an organization can rate volunteers.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   },
   "homepage": "https://github.com/thisisserious/soloProject#readme",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "normalize-css": "^2.3.1"
