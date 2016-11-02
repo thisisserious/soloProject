@@ -9,17 +9,11 @@ function GoodHelpController($http) {
   controller.listOrg = function() {
     console.log('Listing organizations');
     $http.get('/orgs').then(function(response) {
-      console.log('response', response);
+      console.log('listOrg response', response);
       controller.org = response.data;
+      console.log('controller.org', controller.org);
     }, function(error) {
       console.log('error making request', error);
-    });
-  };
-
-  controller.addOrg = function() {
-    var data = {org: controller.org};
-    $http.post('/orgs', data).then(function(response) {
-      console.log('response', response);
     });
   };
 }
