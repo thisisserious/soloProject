@@ -4,6 +4,8 @@ angular.module('goodHelpApp')
             templateUrl: 'views/home.html'
           }).when('/register', {
             templateUrl: 'views/register.html'
+          }).otherwise('/home', {
+            templateUrl: 'views/home.html'
           });
           $locationProvider.html5Mode(true);
         });
