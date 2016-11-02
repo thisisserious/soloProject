@@ -1,1 +1,1 @@
-angular.module('goodHelpApp', []);
+angular.module('goodHelpApp', ['ngRoute']);
