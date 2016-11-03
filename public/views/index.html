@@ -8,6 +8,7 @@
     <!-- vendors -->
     <script src="../vendors/angular.min.js"></script>
     <script src="../vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvxVdxhDqyVuMMiiKEcoqBAva5BOguGKw&libraries=places"></script>
 
     <!-- scripts -->
     <script src="../scripts/index.module.js"></script>
@@ -42,7 +43,7 @@
                         <div class="form-group">
                             <input type="text" ng-model="ctrl.searchTerm" class="form-control" placeholder="Search" />
                         </div>
-                        <a class="btn btn-info" href="/search" ng-click="ctrl.search(ctrl.searchTerm)" role="button">Search</a>
+                        <a class="btn btn-info" href="/search" ng-click="ctrl.searchFor(ctrl.searchTerm)" role="button">Search</a>
                     </form>
                 </div>
             </div>
@@ -51,11 +52,11 @@
         <ng-view></ng-view>
         <!-- footer -->
         <footer class="footer">
-          <nav class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container">
-                <p class="text-muted"> Good Help &copy; 2016</p>
-            </div>
-          </nav>
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container">
+                    <p class="text-muted"> Good Help &copy; 2016</p>
+                </div>
+            </nav>
         </footer>
     </main>
 </body>

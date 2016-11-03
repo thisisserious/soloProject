@@ -1,7 +1,7 @@
 angular.module('goodHelpApp')
        .controller('GoodHelpController', GoodHelpController);
 
-function GoodHelpController($http) {
+function GoodHelpController($http, goodHelpService) {
   console.log('GoodHelpController loaded');
   var controller = this;
   controller.org = [];
@@ -17,7 +17,12 @@ function GoodHelpController($http) {
     });
   };
 
-  controller.search = function(searchTerm) {
+  controller.searchFor = function(searchTerm) {
     console.log('Search term from index.html:', searchTerm);
+
+    goodHelpService.search(searchTerm)
+    .then(function(results) {
+      controller.searchedPlaces = results;
+    });
   };
 }

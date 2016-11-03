@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const connection = require('./connection');
 const orgs = require('./routes/orgs');
+const places = require('./routes/places');
 
 const port = process.env.PORT || 3000;
 
@@ -13,6 +14,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.use('/orgs', orgs);
+app.use('/places', places);
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/views/index.html'));

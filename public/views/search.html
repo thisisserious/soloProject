@@ -1,1 +1,6 @@
-<h1>Search results!</h1>
+<div class="container">
+    <h1>Search results!</h1>
+    <div class="row">
+        <div ng-repeat="result in ctrl.searchedPlaces" class="col-md-12">{{ result.name }}</div>
+    </div>
+</div>
