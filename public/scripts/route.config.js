@@ -4,6 +4,8 @@ angular.module('goodHelpApp')
             templateUrl: 'views/home.html'
           }).when('/register', {
             templateUrl: 'views/register.html'
+          }).when('/search', {
+            templateUrl: 'views/search.html'
           }).otherwise('/home', {
             templateUrl: 'views/home.html'
           });
