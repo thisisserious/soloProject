@@ -16,4 +16,8 @@ function GoodHelpController($http) {
       console.log('error making request', error);
     });
   };
+
+  controller.search = function(searchTerm) {
+    console.log('Search term from index.html:', searchTerm);
+  };
 }

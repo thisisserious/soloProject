@@ -7,7 +7,7 @@ function GoodHelpService($http) {
   var placeid = 'ChIJvbt3k5Azs1IRB-56L4TJn5M';
   var key = 'AIzaSyAvxVdxhDqyVuMMiiKEcoqBAva5BOguGKw';
 
-  this.search = function(query) {
+  this.search = function() {
     return $http.get(api + '?placeid=' + placeid + '&key=' + key)
     .then(function(response) {
       console.log('Got response from API', response);
@@ -15,5 +15,3 @@ function GoodHelpService($http) {
     });
   };
 }
-
-// + '?placeid=' + placeid + '&key=' + key <-- concatenation
