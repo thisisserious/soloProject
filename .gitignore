@@ -1,3 +1,9 @@
+# MacOS
 .DS_Store
+
+# Node
 node_modules
-public/vendors/
+*.log
+
+public/vendors
+.env
