@@ -1,26 +1,24 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const passport = require('./auth/passport');
-const configs = require('.config/auth');
+const configs = require('./config/auth');
 const connection = require('./connection');
 const auth = require('./routes/auth');
 const orgs = require('./routes/orgs');
 const places = require('./routes/places');
-const dotenv = require('dotenv');
-
 const port = process.env.PORT || 3000;
 
 connection.connect();
-dotenv.config();
 app.use(bodyParser.json());
 
 app.use(express.static('public'));
 
 app.use(session({
-  secret: configs.sessionVars.secret,
+  secret: process.env.SECRET,
   key: 'user',
   resave: 'true',
   saveUninitialized: false,

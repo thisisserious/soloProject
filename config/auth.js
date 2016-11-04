@@ -1,17 +1,5 @@
-exports.authConfigs = {
-  googleAuth: {
-    clientId: process.env.clientId,
-    clientSecret: process.env.clientSecret,
-    callbackURL: 'http://localhost:3000/auth/google/callback',
-  },
-
-  sessionVars: {
-    secret: '',
-  },
-};
-
 var User = require('../models/user');
-exports.UserService = {
+var UserService = {
   findUserById: function(id, callback) {
     User.findById(id, function(err, user) {
       if (err) {
@@ -47,3 +35,5 @@ exports.UserService = {
     });
   },
 };
+
+module.exports = UserService;

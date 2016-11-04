@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('../auth/passport');
 
 router.get('/google', passport.authenticate('google', {
-    scope: ['profile', 'email'],
+    scope: ['openid', 'profile', 'email'],
     prompt: 'select_account',
   }));
 
