@@ -22,6 +22,7 @@ function GoodHelpController($http, goodHelpService) {
 
     goodHelpService.search(searchTerm)
     .then(function(results) {
+      controller.searchTerm = '';
       controller.searchedPlaces = results;
     });
   };
