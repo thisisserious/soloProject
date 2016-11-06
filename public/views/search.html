@@ -4,7 +4,9 @@
         <div ng-repeat="result in ctrl.searchedPlaces" class="col-md-12">
           <h3>{{ result.name }}</h3>
           <p>{{ result.formatted_address }}</p>
-          <img ng-src="{{result.photos.html_attributions["0"]}}" />
+          <!-- <img ng-src="{{result.photos.html_attributions["0"]}}" class="img-responsive" alt="google map image" /> -->
+          <button type="button" class="btn btn-primary">Leave a review</button>
+          <a class="btn btn-info" id="{{result.id}}" href="/profile" ng-click="ctrl.createProfile()">View profile</a>
           <hr />
         </div>
     </div>

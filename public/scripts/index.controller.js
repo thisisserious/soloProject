@@ -19,11 +19,18 @@ function GoodHelpController($http, goodHelpService) {
 
   controller.searchFor = function(searchTerm) {
     console.log('Search term from index.html:', searchTerm);
+    controller.searchTerm = '';
 
     goodHelpService.search(searchTerm)
     .then(function(results) {
-      controller.searchTerm = '';
       controller.searchedPlaces = results;
+    });
+  };
+
+  controller.createProfile = function() {
+    console.log('Profile button clicked');
+    controller.forEach(function() {
+      if()
     });
   };
 }

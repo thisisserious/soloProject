@@ -8,6 +8,8 @@ angular.module('goodHelpApp')
             templateUrl: 'views/search.html'
           }).when('/signin', {
             templateUrl: 'views/signin.html'
+          }).when('/profile', {
+            templateUrl: 'views/profile.html'
           }).otherwise('/home', {
             templateUrl: 'views/home.html'
           });
