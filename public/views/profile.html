@@ -1,11 +1,26 @@
 <div class="container">
-  <h1>Profile page</h1>
-  <div class="row">
-      <div class="col-md-12">
-        <h3>{{ ctrl.selectedProfile.name }}</h3>
-        <p>{{ ctrl.selectedProfile.formatted_address }}</p>
-        <button type="button" class="btn btn-primary">Leave a review</button>
-        <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../assets/map.jpeg" class="img-responsive" alt="map" />
+        </div>
+        <div class="col-md-4">
+            <h3>{{ ctrl.selectedProfile.name }}</h3>
+            <p>{{ ctrl.selectedProfile.formatted_address }}</p>
+            <div class="container">
+                <span class="glyphicon glyphicon-heart"></span>
+                <span class="glyphicon glyphicon-heart"></span>
+                <span class="glyphicon glyphicon-heart"></span>
+                <span class="glyphicon glyphicon-heart"></span>
+                <span class="glyphicon glyphicon-heart-empty"></span>
+            </div>
+            <button type="button" class="btn btn-primary">Leave a review</button>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <textarea class="form-control" rows="3" placeholder="Leave a comment..."></textarea>
+        <input class="btn btn-default" type="submit" value="Submit">
       </div>
-  </div>
+    </div>
 </div>
