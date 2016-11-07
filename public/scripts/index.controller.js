@@ -2,7 +2,7 @@ angular.module('goodHelpApp')
        .controller('GoodHelpController', GoodHelpController);
 
 function GoodHelpController($http, goodHelpService) {
-  console.log('GoodHelpController loaded');
+  // console.log('GoodHelpController loaded');
   var controller = this;
 
   controller.listOrg = function() {
@@ -17,7 +17,7 @@ function GoodHelpController($http, goodHelpService) {
   };
 
   controller.searchFor = function(searchTerm) {
-    console.log('Search term from index.html:', searchTerm);
+    // console.log('Search term from index.html:', searchTerm);
     controller.searchTerm = '';
 
     goodHelpService.search(searchTerm)
@@ -28,21 +28,7 @@ function GoodHelpController($http, goodHelpService) {
 
   controller.createProfile = function(buttonClick) {
     console.log('buttonClick', buttonClick);
+    controller.selectedProfile = buttonClick;
     console.log('controller', controller);
-    var searchedPlaces = controller.searchedPlaces;
-    console.log('searchedPlaces:', searchedPlaces);
-    var i = 0;
-    searchedPlaces.forEach(function(id) {
-      i++;
-      var id = controller.searchedPlaces[i].id;
-      // var name = controller.searchedPlaces[i].name;
-      // console.log('id:', id);
-      // console.log('name', name);
-      if (id === buttonClick) {
-        var name = controller.searchedPlaces[i].name;
-        console.log('selected name:', name);
-        return name;
-      }
-    });
   };
 }

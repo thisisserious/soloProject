@@ -1,5 +1,11 @@
 <div class="container">
   <h1>Profile page</h1>
-  <h3>{{ result.name }}</h3>
-  <p>{{ result.formatted_address }}</p>
+  <div class="row">
+      <div class="col-md-12">
+        <h3>{{ ctrl.selectedProfile.name }}</h3>
+        <p>{{ ctrl.selectedProfile.formatted_address }}</p>
+        <button type="button" class="btn btn-primary">Leave a review</button>
+        <hr />
+      </div>
+  </div>
 </div>
