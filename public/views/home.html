@@ -6,7 +6,7 @@
         <p>This is a description about what this app is and why it matters.</p>
         <!-- Angular and MongoDB test -->
         <button ng-click="ctrl.listOrg()" type="submit">Get Orgs</button>
-        <p ng-repeat="org in ctrl.org">{{ org.name }}</p>
+        <p ng-repeat="org in ctrl.org">{{ org.name }}, review: "{{ org.review }}"</p>
     </div>
 </div>
 <!-- image -->
