@@ -3,6 +3,7 @@
         <div class="col-md-6">
             <img src="../assets/map.jpeg" class="img-responsive" alt="map" />
         </div>
+        <!-- createProfile page -->
         <div class="col-md-4">
             <h3>{{ ctrl.selectedProfile.name }}</h3>
             <p>{{ ctrl.selectedProfile.formatted_address }}</p>
@@ -21,6 +22,11 @@
       <div class="col-md-6">
         <textarea class="form-control" ng-model="ctrl.review" rows="3" placeholder="Leave a comment..."></textarea>
         <input class="btn btn-default" ng-click="ctrl.submitReview(ctrl.review)" type="submit" value="Submit">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p ng-repeat="org in ctrl.org">{{ org.name }} | Review: "{{ org.review }}"</p>
       </div>
     </div>
 </div>

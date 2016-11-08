@@ -30,6 +30,7 @@ function GoodHelpController($http, goodHelpService) {
     console.log('buttonClick', buttonClick);
     controller.selectedProfile = buttonClick;
     console.log('controller', controller);
+    controller.listOrg();
   };
 
   // post review to mongo db
@@ -38,7 +39,8 @@ function GoodHelpController($http, goodHelpService) {
     var address = controller.selectedProfile.formatted_address;
     var id = controller.selectedProfile.id;
     console.log('submitReview name:', name);
-    var data = {review: controller.review, name: name, address: address, id: id};
+    var data = {review: controller.review, name: name, address: address,
+      id: id};
     console.log('review:', data);
     $http.post('/orgs', data);
     controller.review = '';
