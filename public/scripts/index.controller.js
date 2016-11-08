@@ -34,7 +34,11 @@ function GoodHelpController($http, goodHelpService) {
 
   // post review to mongo db
   controller.submitReview = function(review) {
-    var data = {review: controller.review};
+    var name = controller.selectedProfile.name;
+    var address = controller.selectedProfile.formatted_address;
+    var id = controller.selectedProfile.id;
+    console.log('submitReview name:', name);
+    var data = {review: controller.review, name: name, address: address, id: id};
     console.log('review:', data);
     $http.post('/orgs', data);
     controller.review = '';

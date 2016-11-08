@@ -12,8 +12,11 @@ router.get('/', function(req, res) {
 // post documents to mongo db
 router.post('/', function(req, res) {
   var review = req.body.review;
-  console.log('post review:', review);
-  var saveReview = new Org({review: review});
+  var name = req.body.name;
+  var address = req.body.address;
+  var id = req.body.id;
+  console.log('req.body:', req.body);
+  var saveReview = new Org({review: review, name: name, address: address, id: id});
   console.log('saveReview:', saveReview);
   saveReview.save().then(function() {
     console.log('Saved a new review');
