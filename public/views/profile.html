@@ -26,7 +26,9 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <p ng-repeat="org in ctrl.org">{{ org.name }} | Review: "{{ org.review }}"</p>
+        <div ng-repeat="review in ctrl.reviews">
+          <p>Review: "{{ review }}"</p>
+        </div>
       </div>
     </div>
 </div>

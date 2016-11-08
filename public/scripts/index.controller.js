@@ -3,6 +3,7 @@ angular.module('goodHelpApp')
 
 function GoodHelpController($http, goodHelpService) {
   var controller = this;
+  controller.reviews = [];
 
   // retrieve data from mongo db
   controller.listOrg = function() {
@@ -16,7 +17,7 @@ function GoodHelpController($http, goodHelpService) {
     });
   };
 
-  // search for an organzation
+  // search for an organization
   controller.searchFor = function(searchTerm) {
     controller.searchTerm = '';
     goodHelpService.search(searchTerm)
@@ -30,7 +31,21 @@ function GoodHelpController($http, goodHelpService) {
     console.log('buttonClick', buttonClick);
     controller.selectedProfile = buttonClick;
     console.log('controller', controller);
-    controller.listOrg();
+    $http.get('/orgs').then(function(response) {
+      console.log('createProfile response', response);
+      var i = 0;
+      response.data.forEach(function() {
+        var name = response.data[i].name;
+        var address = response.data[i].address;
+        var review = response.data[i].review;
+        if(buttonClick.name === name && buttonClick.formatted_address === address) {
+          controller.reviews.push(review);
+          console.log('controller.reviews', controller.reviews);
+        }
+        // console.log('createProfile review:', response.data[i].review);
+        i++;
+      });
+    });
   };
 
   // post review to mongo db
@@ -44,5 +59,7 @@ function GoodHelpController($http, goodHelpService) {
     console.log('review:', data);
     $http.post('/orgs', data);
     controller.review = '';
+  }, function(error) {
+    console.log('error posting request', error);
   };
 }
