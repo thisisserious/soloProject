@@ -1,1 +1,1 @@
-angular.module('goodHelpApp', ['ngRoute']);
+angular.module('goodHelpApp', ['ngRoute', 'ui.bootstrap']);

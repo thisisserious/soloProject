@@ -1,7 +1,7 @@
 angular.module('goodHelpApp')
        .controller('GoodHelpController', GoodHelpController);
 
-function GoodHelpController($http, goodHelpService) {
+function GoodHelpController($http, goodHelpService, $uibModal) {
   var controller = this;
   controller.reviews = [];
 
@@ -61,5 +61,13 @@ function GoodHelpController($http, goodHelpService) {
     controller.review = '';
   }, function(error) {
     console.log('error posting request', error);
+  };
+
+  controller.createReview = function() {
+    console.log('createReview clicked');
+    var modalInstance = $uibModal.open({
+      templateUrl: 'views/modal.html',
+      controller: 'ReviewController as rCtrl'
+    });
   };
 }

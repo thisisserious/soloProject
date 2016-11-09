@@ -20,8 +20,9 @@
   "homepage": "https://github.com/thisisserious/soloProject#readme",
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-modal-service": "^0.10.1",
+    "angular-animate": "^1.5.8",
     "angular-route": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "dotenv": "^2.0.0",
