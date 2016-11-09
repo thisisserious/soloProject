@@ -37,12 +37,12 @@ function GoodHelpController($http, goodHelpService) {
       response.data.forEach(function() {
         var name = response.data[i].name;
         var address = response.data[i].address;
-        var review = response.data[i].review;
-        if(buttonClick.name === name && buttonClick.formatted_address === address) {
-          controller.reviews.push(review);
+        var reviews = response.data[i].reviews;
+        if(buttonClick.name === name && buttonClick.formatted_address ===
+          address) {
+          controller.reviews = reviews;
           console.log('controller.reviews', controller.reviews);
         }
-        // console.log('createProfile review:', response.data[i].review);
         i++;
       });
     });
@@ -52,10 +52,10 @@ function GoodHelpController($http, goodHelpService) {
   controller.submitReview = function(review) {
     var name = controller.selectedProfile.name;
     var address = controller.selectedProfile.formatted_address;
-    var id = controller.selectedProfile.id;
+    var googleID = controller.selectedProfile.id;
     console.log('submitReview name:', name);
     var data = {review: controller.review, name: name, address: address,
-      id: id};
+      googleID: googleID};
     console.log('review:', data);
     $http.post('/orgs', data);
     controller.review = '';

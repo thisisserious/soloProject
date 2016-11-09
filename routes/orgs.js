@@ -9,17 +9,28 @@ router.get('/', function(req, res) {
   });
 });
 
-// post documents to mongo db
+// post documents to mongo db; create document if not present & add review;
+// add review to existing document if already present
 router.post('/', function(req, res) {
+  console.log('about to create new review');
   var review = req.body.review;
   var name = req.body.name;
   var address = req.body.address;
-  var id = req.body.id;
-  var saveReview = new Org({review: review, name: name, address: address,
-    id: id});
-  saveReview.save().then(function() {
-    console.log('Saved a new review');
-    res.sendStatus(201);
+  var googleID = req.body.googleID;
+  Org.findOne({name: name, address: address,
+    googleID: googleID}).then(function(org) {
+      if(!org) {
+        var org = new Org({name: name, address: address, googleID: googleID,
+          reviews: []});
+      }
+      org.reviews.push(review);
+      return org.save().then(function(org) {
+        console.log('Saved a new review', org);
+        res.sendStatus(201);
+      });
+    }).catch(function(err) {
+    console.log('Error saving review', err);
+    res.sendStatus(500);
   });
 });
 
