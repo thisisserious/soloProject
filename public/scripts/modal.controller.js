@@ -4,8 +4,8 @@ angular.module('goodHelpApp')
 function ReviewController($uibModalInstance) {
   var rCtrl = this;
 
-rCtrl.close = function () {
-   location.reload();
-   $uibModalInstance.close();
- };
- }
+  rCtrl.close = function() {
+    // location.reload();
+    $uibModalInstance.close();
+  };
+}

@@ -1,12 +1,44 @@
-<div class="modal-header">
-  <h3>Leave a review</h3>
-</div>
+<div class="modal-content" id="reviewModal" role="form" aria-labelledby="leaveAReviewModal">
 
-<div class="modal-body">
-  <p>testing the modal</p>
-</div>
+    <div class="modal-header">
+        <h3 class="modal-title">Leave a review</h3>
+    </div>
 
-<div class="modal-footer">
-  <button type="submit" class="btn btn-info">Submit</button>
-  <button class="btn btn-danger" ng-click="rCtrl.close()">Cancel</button>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Do you feel your time was used wisely?</label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="radioOptions" value="option1" />
+            Yes
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="radioOptions" value="option2" />
+            No
+          </label>
+        </div>
+        <input type="text" class="form-control" placeholder="Please provide more info..." />
+        <label>What type of task(s) were you doing?</label>
+        <textarea class="form-control" rows="2" placeholder="Data entry / making sandwiches / hammering..."></textarea>
+        <label>Would you volunteer for this organization again?</label>
+        <select class="form-control">
+          <option>Yes</option>
+          <option>No, but it has nothing to do with the organization</option>
+          <option>No</option>
+        </select>
+        <textarea class="form-control" rows="2" placeholder="Please provide more info..."></textarea>
+        <label>Please rate this organization:</label>
+        <div class="container">
+        <span class="glyphicon glyphicon-heart-empty"></span>
+      </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-info">Submit</button>
+        <button type="button" class="btn btn-danger" ng-click="rCtrl.close()">Cancel</button>
+    </div>
+
 </div>
