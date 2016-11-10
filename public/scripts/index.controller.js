@@ -63,8 +63,8 @@ function GoodHelpController($http, goodHelpService, $uibModal) {
     console.log('error posting request', error);
   };
 
+  // create a review modal
   controller.createReview = function() {
-    console.log('createReview clicked');
     var modalInstance = $uibModal.open({
       templateUrl: 'views/modal.html',
       controller: 'ReviewController as rCtrl'
