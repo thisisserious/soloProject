@@ -20,14 +20,8 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <textarea class="form-control" ng-model="ctrl.review" rows="3" placeholder="Leave a comment..."></textarea>
-        <input class="btn btn-default" ng-click="ctrl.submitReview(ctrl.review)" type="submit" value="Submit">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
         <div ng-repeat="review in ctrl.reviews">
-          <p>Review: "{{ review }}"</p>
+          <p>Review: "{{ review.tasks }}"</p>
         </div>
       </div>
     </div>

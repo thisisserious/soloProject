@@ -21,7 +21,7 @@ router.post('/', function(req, res) {
     googleID: googleID}).then(function(org) {
       if(!org) {
         var org = new Org({name: name, address: address, googleID: googleID,
-          reviews: []});
+          reviews: [{}]});
       }
       org.reviews.push(review);
       return org.save().then(function(org) {

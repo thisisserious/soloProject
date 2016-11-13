@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Org = mongoose.model('business', {
   name: String,
   address: String,
-  reviews: [String],
+  reviews: [{}],
   googleID: String
 });
 
