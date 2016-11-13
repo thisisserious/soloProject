@@ -4,6 +4,7 @@ angular.module('goodHelpApp')
 function GoodHelpController($http, goodHelpService, $uibModal) {
   var controller = this;
   controller.reviews = [];
+  controller.selectedProfile = {};
 
   // retrieve data from mongo db
   controller.listOrg = function() {
@@ -67,7 +68,12 @@ function GoodHelpController($http, goodHelpService, $uibModal) {
   controller.createReview = function() {
     var modalInstance = $uibModal.open({
       templateUrl: 'views/modal.html',
-      controller: 'ReviewController as rCtrl'
+      controller: 'ReviewController as rCtrl',
+      resolve: {
+        profile: function() {
+          return controller.selectedProfile;
+        },
+      }
     });
   };
 }

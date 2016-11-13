@@ -1,43 +1,47 @@
 <div class="modal-content" id="reviewModal" role="form" aria-labelledby="leaveAReviewModal">
-
+    <!-- header -->
     <div class="modal-header">
         <h3 class="modal-title">Leave a review</h3>
     </div>
-
+    <!-- body -->
     <div class="modal-body">
-      <div class="form-group">
-        <label>Do you feel your time was used wisely?</label>
-        <div class="radio">
-          <label>
-            <input type="radio" name="radioOptions" value="option1" />
+        <div class="form-group">
+            <!-- question 1 -->
+            <label>Do you feel your time was used wisely?</label>
+            <div class="radio">
+                <label>
+            <input type="radio" name="radioOptions" ng-model="rCtrl.review.timeUsedWisely" value="yes" />
             Yes
           </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="radioOptions" value="option2" />
+            </div>
+            <div class="radio">
+                <label>
+            <input type="radio" name="radioOptions" ng-model="rCtrl.review.timeUsedWisely" value="no" />
             No
           </label>
-        </div>
-        <input type="text" class="form-control" placeholder="Please provide more info..." />
-        <label>What type of task(s) were you doing?</label>
-        <textarea class="form-control" rows="2" placeholder="Data entry / making sandwiches / hammering..."></textarea>
-        <label>Would you volunteer for this organization again?</label>
-        <select class="form-control">
+            </div>
+            <input type="text" class="form-control" placeholder="Please provide more info..." />
+            <!-- question 2 -->
+            <label>What type of task(s) were you doing?</label>
+            <textarea class="form-control" ng-model="rCtrl.review.tasks" rows="2" placeholder="Data entry / making sandwiches / hammering..."></textarea>
+            <!-- question 3 -->
+            <label>Would you volunteer for this organization again?</label>
+            <select class="form-control">
           <option>Yes</option>
           <option>No, but it has nothing to do with the organization</option>
           <option>No</option>
         </select>
-        <textarea class="form-control" rows="2" placeholder="Please provide more info..."></textarea>
-        <label>Please rate this organization:</label>
-        <div class="container">
-        <span class="glyphicon glyphicon-heart-empty"></span>
-      </div>
-      </div>
+            <textarea class="form-control" rows="2" placeholder="Please provide more info..."></textarea>
+            <!-- rating -->
+            <label>Please rate this organization:</label>
+            <div class="container">
+                <span class="glyphicon glyphicon-heart-empty"></span>
+            </div>
+        </div>
     </div>
-
+    <!-- footer -->
     <div class="modal-footer">
-        <button type="submit" class="btn btn-info">Submit</button>
+        <button type="submit" ng-click="rCtrl.submitReview(rCtrl.review)" class="btn btn-info">Submit</button>
         <button type="button" class="btn btn-danger" ng-click="rCtrl.close()">Cancel</button>
     </div>
 
