@@ -6,8 +6,8 @@ for that organization. Conversely, an organization can rate volunteers.
 ## Set-up
 1. After forking this repo, run npm install
 2. In MongoDB, run the following commands:
-- `use goodHelp`
-- `db.createCollection("business")`
+    - `use goodHelp`
+    - `db.createCollection("business")`
 
 # Author
 - Laura Abend
