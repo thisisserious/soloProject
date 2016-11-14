@@ -8,11 +8,11 @@ function GoodHelpController($http, goodHelpService, $uibModal) {
 
   // retrieve data from mongo db
   controller.listOrg = function() {
-    console.log('Listing organizations');
+    // console.log('Listing organizations');
     $http.get('/orgs').then(function(response) {
-      console.log('listOrg response', response);
+      // console.log('listOrg response', response);
       controller.org = response.data;
-      console.log('controller.org', controller.org);
+      // console.log('controller.org', controller.org);
     }, function(error) {
       console.log('error making request', error);
     });
@@ -29,11 +29,13 @@ function GoodHelpController($http, goodHelpService, $uibModal) {
 
   // create an organization's profile
   controller.createProfile = function(buttonClick) {
-    console.log('buttonClick', buttonClick);
+    // console.log('buttonClick', buttonClick);
     controller.selectedProfile = buttonClick;
-    console.log('controller', controller);
+    // var image = buttonClick.icon;
+    // console.log('createProfile image:', image);
+    // console.log('controller', controller);
     $http.get('/orgs').then(function(response) {
-      console.log('createProfile response', response);
+      // console.log('createProfile response', response);
       var i = 0;
       response.data.forEach(function() {
         var name = response.data[i].name;
@@ -42,7 +44,7 @@ function GoodHelpController($http, goodHelpService, $uibModal) {
         if(buttonClick.name === name && buttonClick.formatted_address ===
           address) {
           controller.reviews = reviews;
-          console.log('controller.reviews', controller.reviews);
+          // console.log('controller.reviews', controller.reviews);
         }
         i++;
       });
@@ -54,10 +56,10 @@ function GoodHelpController($http, goodHelpService, $uibModal) {
     var name = controller.selectedProfile.name;
     var address = controller.selectedProfile.formatted_address;
     var googleID = controller.selectedProfile.id;
-    console.log('submitReview name:', name);
+    // console.log('submitReview name:', name);
     var data = {review: controller.review, name: name, address: address,
       googleID: googleID};
-    console.log('review:', data);
+    // console.log('review:', data);
     $http.post('/orgs', data);
     controller.review = '';
   }, function(error) {

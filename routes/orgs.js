@@ -34,4 +34,15 @@ router.post('/', function(req, res) {
   });
 });
 
+// router.put('/', function(req, res) {
+//   var review = [];
+//   var tasks = req.body.review.tasks;
+//   var timeUsedWisely = req.body.review.timeUsedWisely;
+//   console.log('put request tasks:', tasks);
+//   console.log('put request timeUsedWisely', timeUsedWisely);
+//   review.push(tasks, timeUsedWisely);
+//   console.log('put request review array:', review);
+//   res.send(review);
+// });
+
 module.exports = router;

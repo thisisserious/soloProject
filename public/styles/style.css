@@ -3,6 +3,23 @@ body {
   padding-bottom: 70px;
 }
 
+/*h3 {
+  position: absolute;
+  top: 100px;
+  text-align: left;
+  right: 50px;
+}*/
+
 .jumbotron {
   text-align: center;
 }
+
+/*.container-fluid {
+  position: relative;
+}
+
+.container#imageTextOverlay {
+  border: 1px solid black;
+  height: 200px;
+  position: absolute;
+}*/
