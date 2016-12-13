@@ -45,5 +45,5 @@ This project was designed to showcase my full-stack skills in planning, designin
 
 # Author
 - Laura Abend
----
+
 Back to [top](#top)
