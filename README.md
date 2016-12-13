@@ -17,18 +17,22 @@ This project was designed to showcase my full-stack skills in planning, designin
 ### <a name="homepage">Good Help Homepage</a>
 ![Good Help](screenshots/homepage.png)
 #### [Features](#features)
+---
 
 ### <a name="search">Good Help Search</a>
 ![Good Help Search](screenshots/search.png)
 #### [Previous](#homepage) | [Features](#features)
+---
 
 ### <a name="results">Good Help Search Results</a>
 ![Good Help Search Results](screenshots/searchresults.png)
 #### [Previous](#search) | [Features](#features)
+---
 
 ### <a name="review">Good Help Review Modal</a>
 ![Good Help Review Modal](screenshots/reviewmodal.png)
 #### [Previous](#results) | [Features](#features)
+---
 
 # Author
 - Laura Abend
