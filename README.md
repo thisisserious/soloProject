@@ -1,5 +1,4 @@
-# Solo Project - Good Help
-<a name="top">top</a>
+# <a name="top">Solo Project - Good Help</a>
 Built for my solo project [@PrimeAcademy](https://github.com/PrimeAcademy), ‘Good Help’ is a dual-rating system application that allows a user to search for
 an organization that relies on volunteers and rate their experience volunteering
 for that organization. Conversely, an organization can rate volunteers. For ease of use, sign in using an existing Gmail account.
@@ -16,20 +15,16 @@ This project was designed to showcase my full-stack skills in planning, designin
 [Homepage](#homepage) | [Search](#search) | [Search Results](#results) | [Review Modal](#review)
 
 ### <a name="homepage">Good Help Homepage</a>
-![Good Help](screenshots/homepage.png)
-Back to [Features](#features)
+![Good Help](screenshots/homepage.png)[Features](#features)
 
 ### <a name="search">Good Help Search</a>
-![Good Help Search](screenshots/search.png)
-[Previous](#homepage) | Back to [Features](#features)
+![Good Help Search](screenshots/search.png)[Previous](#homepage) | [Features](#features)
 
 ### <a name="results">Good Help Search Results</a>
-![Good Help Search Results](screenshots/searchresults.png)
-[Previous](#search) | Back to [Features](#features)
+![Good Help Search Results](screenshots/searchresults.png)[Previous](#search) | [Features](#features)
 
 ### <a name="review">Good Help Review Modal</a>
-![Good Help Review Modal](screenshots/reviewmodal.png)
-[Previous](#results) | Back to [Features](#features)
+![Good Help Review Modal](screenshots/reviewmodal.png)[Previous](#results) | [Features](#features)
 
 # Author
 - Laura Abend
