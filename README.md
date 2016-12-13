@@ -3,7 +3,7 @@ Built for my solo project @PrimeAcademy, ‘Good Help’ is a dual-rating system
 an organization that relies on volunteers and rate their experience volunteering
 for that organization. Conversely, an organization can rate volunteers.
 
-![Good Help](/public/assets/readme_imgs/homepage.png?raw=true "Good Help Home Page")
+![Good Help](public/assets/readme_imgs/homepage.png?raw=true "Good Help Home Page")
 
 ## Set-up
 1. After forking this repo, run npm install
