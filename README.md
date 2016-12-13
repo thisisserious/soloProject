@@ -12,7 +12,7 @@ This project was designed to showcase my full-stack skills in planning, designin
     - `db.createCollection("business")`
 
 ## <a name="features">Features</a>
-[Homepage](#homepage) | [Search](#search) | [Search Results](#results) | [Review Modal](#review)
+[Homepage](#homepage) | [Search](#search) | [Search Results](#results) | [Review Modal](#review) | [Profile Page](#profile)
 
 ### <a name="homepage">Good Help Homepage</a>
 ![Good Help](screenshots/homepage.png)
@@ -34,6 +34,12 @@ This project was designed to showcase my full-stack skills in planning, designin
 #### [Previous](#results) | [Features](#features)
 ---
 
+### <a name="profile">Good Help Profile Page</a>
+![Good Help Profile Page](screenshots/profile.png)
+#### [Previous](#review) | [Features](#features)
+
+
 # Author
 - Laura Abend
+
 Back to [top](#top)
